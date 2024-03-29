@@ -30,14 +30,12 @@ app.get('/get_steam_id', (req, res) => {
   fetch(url)
   .then(response => response.json())
   .then(json => {
-    console.log(json.response.steamid)
     const hex = transform_steam("hex", json.response.steamid);
     
     res.json({steamid64: json.response.steamid, steamid_hex: hex});
   })
   .catch(err => {
-      console.error(err);
-      res.json({steamid64: null});
+      res.json({steamid64: null, error:"Failed to Fetch 30"});
   });
 });
 
