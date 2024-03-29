@@ -23,7 +23,7 @@ transform_steam = (type,id) => {
 
 app.get('/get_steam_id', (req, res) => {
   const id = req.query.id
-  const url = `http://api.steampowered.com/ISteamUser/ResolveVanityURL/v0001/?key=${process.env.STEAM_KEY}&vanityurl=${id}`
+  const url = `http://api.steampowered.com/ISteamUser/ResolveVanityURL/v0001/?key=1CB841CFF94C388B9B53F59BCF4B060E&vanityurl=${id}`
 
   
 
